@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Helmet from 'react-helmet';
+
+import ViewportContext, { DeviceTypeEnum } from './contexts/ViewportContext';
 
 import './App.scss';
 
 
 function App() {
+  const { deviceType } = useContext(ViewportContext);
+
   return (
     <div className="app">
       <Helmet defaultTitle="Google news" />
-      <p>Google news</p>
+      {deviceType === DeviceTypeEnum.TABLET ? <p>tablet</p> : <p>desktop</p>}
     </div>
   );
 }
