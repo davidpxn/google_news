@@ -8,8 +8,7 @@
 
   width: 100%;
   padding: 0.5rem;
-  background-color: $grey-light;
-  border: 2px solid $grey-dark;
+  border: 2px solid $black;
 
   &__input {
     flex-grow: 1;
@@ -19,7 +18,7 @@
     background-color: transparent;
     outline-width: 0;
 
-    color: $grey-dark;
+    color: $black;
     font-weight: bold;
   }
 
@@ -33,6 +32,6 @@
     width: 16px;
     height: 16px;
 
-    fill: $grey-dark;
+    fill: $black;
   }
 }

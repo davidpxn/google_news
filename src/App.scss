@@ -18,7 +18,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
 
-  font-family: sans-serif;
+  font-family: $font-main;
   font-size: $size-m;
   color: $black;
 
@@ -27,4 +27,8 @@ html {
 
 img {
   max-width: 100%;
+}
+
+.app {
+  margin: 1rem;
 }

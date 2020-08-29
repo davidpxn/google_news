@@ -12,3 +12,37 @@ $size-s: 14px;
 $size-m: 16px;
 $size-l: 20px;
 $size-xl: 24px;
+$size-xxl: 30px;
+
+
+/* Font family */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./resources/fonts/MontserratRegular.ttf) format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./resources/fonts/MontserratSemiBold.ttf) format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./resources/fonts/MontserratBold.ttf) format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: local('ProductSans'), url(./resources/fonts/ProductSansRegular.ttf) format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'ProductSans';
+  src: local('ProductSans'), url(./resources/fonts/ProductSansBold.ttf) format('truetype');
+  font-weight: bold;
+}
+
+$font-main: Montserrat, sans-serif;
+$font-header: ProductSans, sans-serif;
