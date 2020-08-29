@@ -4,6 +4,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { getImages } from '../../api/api';
 
 import Search from '../../components/search/Search';
+import Card from '../../components/card/Card';
 
 import './Home.scss';
 
@@ -51,8 +52,8 @@ function Home() {
         handleSearch={handleSearch}
         handleChange={handleSearchChange}
       />
-      {items.map(item => (
-        <p>{item.title}</p>
+      {items.map(i => (
+        <Card {...i}/>
       ))}
     </main>
   );

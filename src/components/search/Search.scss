@@ -9,6 +9,7 @@
   width: 100%;
   padding: 0.5rem;
   background-color: $grey-light;
+  border: 2px solid $grey-dark;
 
   &__input {
     flex-grow: 1;
@@ -17,6 +18,9 @@
     border: none;
     background-color: transparent;
     outline-width: 0;
+
+    color: $grey-dark;
+    font-weight: bold;
   }
 
   &__button {

@@ -13,10 +13,18 @@ async function getImages(searchString, startIndex) {
     const body = await response.json();;
     const { status, ok } = response;
 
+    const items = body.items.map(i => {
+      return {
+        title: i.title,
+        imgLink: i.link,
+        contextLink: i.image.contextLink,
+      };
+    });
+
     result = {
       ok,
       status,
-      items: body.items,
+      items,
     };
   } catch(e) {
     console.error(e)
