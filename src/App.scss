@@ -26,10 +26,11 @@ html {
   background-color: $white;
 }
 
-img {
-  max-width: 100%;
-}
-
 .app {
+  max-width: $max-width;
   margin: 1rem $offset;
+
+  @media (min-width: $max-width) {
+    margin: 1rem auto;
+  }
 }

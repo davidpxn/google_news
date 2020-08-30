@@ -2,8 +2,14 @@
 
 $max-width: 1500px;
 $gutter: 20px;
-$offset: 20px;
+$offset: 40px;
 $num-col: 12;
+
+
+/* Media query points */
+
+$point-phone-tablet: 800px;
+$point-tablet-desktop: 1100px;
 
 
 /* Colors */
@@ -11,7 +17,7 @@ $num-col: 12;
 $black: #202020;
 $white: #ffffff;
 $blue-light: #e8f3ff;
-$blue-medium: #d0e6ff;
+$blue-medium: #b9daff;
 $blue-dark: #1a73e8;
 
 

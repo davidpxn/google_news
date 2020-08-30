@@ -2,17 +2,35 @@
 
 
 .card {
-  color: $black;
-  text-decoration: none;
+  width: 100%;
+  padding: $gutter $gutter/2;
+  
+
+  &__link {
+    color: $black;
+    text-decoration: none;
+  }
   
   &__img {
     width: 100%;
-    margin-top: 3rem;
-    margin-bottom: 0.5rem;
+    object-fit: cover;
   }
-
+  
   &__title {
     font-size: $size-xl;
     font-weight: 600;
+  }
+
+
+  @media (min-width: $point-phone-tablet) {
+    width: 50%;
+
+    &__img {    
+      height: 300px;
+    }
+  }
+
+  @media (min-width: $point-tablet-desktop) {
+    width: 33.33333333%;
   }
 }

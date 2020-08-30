@@ -5,12 +5,13 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  margin-bottom: 1rem;
 
   width: 100%;
   position: sticky;
   top: 1rem;
 
-  
+
   & > .search__field {
     animation: maximize-animation 300ms ease-out;
     animation-fill-mode: forwards;

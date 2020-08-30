@@ -1,12 +1,10 @@
 
-import React, { useState, useEffect, useContext } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import React, { useState } from 'react';
 
 import { getImages } from '../../api/api';
 
 import Search from '../../components/search/Search';
-import Card from '../../components/card/Card';
-import Loading from '../../components/loading/Loading';
+import List from '../../containers/list/List';
 
 import './Home.scss';
 
@@ -71,20 +69,12 @@ function Home() {
         handleChange={handleSearchChange}
         clearSearch={clearSearch}
       />
-      <InfiniteScroll
-        dataLength={items.length}
-        next={handleSearchScroll}
+      <List
+        items={items}
+        handleSearchScroll={handleSearchScroll}
         hasMore={hasMore}
-        loader={loading && <Loading />}
-        endMessage={
-          <p style={{ textAlign: 'center' }}>
-            <b>Yay! You have seen it all</b>
-          </p>
-        }>
-        {items.map((item, i) => (
-          <Card {...item} key={i} />
-        ))}
-      </InfiniteScroll>
+        loading={loading}>
+      </List>
     </main>
   );
 }
