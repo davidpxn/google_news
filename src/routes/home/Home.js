@@ -45,9 +45,7 @@ function Home() {
     setSearchValue(event.target.value);
   }
 
-  async function handleSearchClick(event) {
-    event.preventDefault();
-
+  async function handleSearchClick() {
     setItems([]);
     setHasMore(true);
 
@@ -83,8 +81,8 @@ function Home() {
             <b>Yay! You have seen it all</b>
           </p>
         }>
-        {items.map(i => (
-          <Card {...i} />
+        {items.map((item, i) => (
+          <Card {...item} key={i} />
         ))}
       </InfiniteScroll>
     </main>

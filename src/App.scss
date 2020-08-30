@@ -1,4 +1,5 @@
 @import "./config.scss";
+// @import "./grid.scss";
 
 
 * {
@@ -30,5 +31,5 @@ img {
 }
 
 .app {
-  margin: 1rem;
+  margin: 1rem $offset;
 }
