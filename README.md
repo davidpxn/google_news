@@ -1,6 +1,6 @@
 # Google Myndir
 
-A simple React app that uses Google Custom Search to search for Icelandic news images. <br/>
+A simple React app that uses Google Custom Search to search for Icelandic news images. <br/><br/>
 It was created with the *create-react-app* starter kit and uses client side rendering. <br/>
 When creating the project, a *Mobile First* approach was used where we focus on the content for mobile site first and the implement for bigger devices afterwards.
 
