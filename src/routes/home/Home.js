@@ -60,12 +60,18 @@ function Home() {
     setItems(previousItems => previousItems.concat(newItems));
   }
 
+  function clearSearch() {
+    setSearchValue('');
+  }
+
 
   return (
     <main>
       <Search
+        value={searchValue}
         handleSearch={handleSearchClick}
         handleChange={handleSearchChange}
+        clearSearch={clearSearch}
       />
       <InfiniteScroll
         dataLength={items.length}

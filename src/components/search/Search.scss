@@ -7,8 +7,9 @@
   align-items: center;
 
   width: 100%;
-  padding: 0.5rem;
-  border: 2px solid $black;
+  padding: 0.5rem 1rem;
+
+  background-color: $blue-light;
 
   &__input {
     flex-grow: 1;
@@ -19,19 +20,31 @@
     outline-width: 0;
 
     color: $black;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: $size-m;
   }
 
-  &__button {
+  &__button, &__clear {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    outline-width: 0;
   }
 
   &__icon {
-    width: 16px;
-    height: 16px;
+    width: 36px;
+    height: 36px;
+    padding-left: 1rem;
 
-    fill: $black;
+    fill: $blue-dark;
+    border-left: 1px solid $blue-medium;
+  }
+
+  &__clear-icon {
+    width: 32px;
+    height: 32px;
+    padding-right: 1rem;
+
+    fill: $blue-medium;
   }
 }
