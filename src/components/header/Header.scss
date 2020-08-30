@@ -5,7 +5,9 @@
   display: flex;
   align-items: baseline;
   margin: 1rem 0;
+
   font-family: $font-header;
+  cursor: pointer;
 
   &__title {
     font-size: $size-xxl;

@@ -13,18 +13,22 @@ async function getImages(searchString, startIndex) {
     const body = await response.json();;
     const { status, ok } = response;
 
-    const items = body.items.map(i => {
-      return {
-        title: i.title,
-        imgLink: i.link,
-        contextLink: i.image.contextLink,
-      };
-    });
+    let items = [];
+    if (body.items) {
+      items = body.items.map(i => {
+        return {
+          title: i.title,
+          imgLink: i.link.startsWith('http') ? i.link : null,
+          contextLink: i.image.contextLink,
+        };
+      });
+    }
 
     result = {
       ok,
       status,
       items,
+      hasMore: ok && body.queries.nextPage !== undefined,
     };
   } catch(e) {
     console.error(e)
