@@ -10,7 +10,7 @@ function Header() {
   return (
     <header className="header" onClick={() => history.replace('/')}>
       <h1 className="header__title">Google</h1>
-      <h1 className="header__subtitle">Fréttir</h1>
+      <h1 className="header__subtitle">Myndir</h1>
     </header>
   );
 }

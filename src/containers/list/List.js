@@ -23,9 +23,7 @@ function List(props) {
       hasMore={hasMore}
       loader={loading && <Loading />}
       endMessage={
-        <p style={{ textAlign: 'center' }}>
-          <b>Yay! You have seen it all</b>
-        </p>
+        <h3 className="list__end">Wooow þú ert búinn að skoða allar myndirnar 😝</h3>
       }>
       {items.map((item, i) => (
         <Card {...item} key={i} />
