@@ -5,6 +5,7 @@ import { getImages } from '../../api/api';
 
 import Search from '../../components/search/Search';
 import List from '../../containers/list/List';
+import Message from '../../components/message/Message';
 
 
 function Home() {
@@ -59,6 +60,13 @@ function Home() {
   }
 
 
+  let message = '';
+  if (error) {
+    message = error;
+  } else if (items.length === 0 && !loading) {
+    message = "Leitaðu af íslenskum fréttamyndum hér að ofan";
+  }
+
   return (
     <main>
       <Search
@@ -67,6 +75,7 @@ function Home() {
         handleChange={handleSearchChange}
         clearSearch={clearSearch}
       />
+      {message && (<Message text={message}/>)}
       <List
         items={items}
         handleSearchScroll={handleSearchScroll}

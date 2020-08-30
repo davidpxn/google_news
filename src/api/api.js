@@ -32,7 +32,7 @@ async function getImages(searchString, startIndex) {
     };
   } catch (e) {
     console.error(e)
-    throw new Error('Error getting images');
+    throw new Error('Ekki tókst að ná í myndirnar. Vinsamlegast reyndu aftur');
   }
 
   return result;

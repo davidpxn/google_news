@@ -3,7 +3,6 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 import Loading from '../../components/loading/Loading';
 import Card from '../../components/card/Card';
-import Empty from '../../components/empty/Empty';
 
 import './List.scss';
 
@@ -16,10 +15,6 @@ function List(props) {
     loading,
   } = props;
 
-
-  if (items.length === 0 && !loading) {
-    return (<Empty />);
-  }
 
   return (
     <InfiniteScroll
