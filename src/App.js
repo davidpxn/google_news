@@ -10,7 +10,7 @@ import './App.scss';
 function App() {
   return (
     <div className="app">
-      <Helmet defaultTitle="Google news" />
+      <Helmet defaultTitle="Google Myndir" />
       <Header/>
       <Home />
     </div>
