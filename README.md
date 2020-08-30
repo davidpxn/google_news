@@ -24,7 +24,6 @@ Now you are all set to run the project:
 ```bash
 > npm start
 ```
-<br/>
 
 ## Live instance
 
