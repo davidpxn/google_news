@@ -6,7 +6,7 @@ import './Header.scss';
 
 function Header() {
   const history = useHistory();
-  
+
   return (
     <header className="header" onClick={() => history.replace('/')}>
       <h1 className="header__title">Google</h1>

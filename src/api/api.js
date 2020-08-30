@@ -6,7 +6,7 @@ async function getImages(searchString, startIndex) {
   url.searchParams.append('q', searchString);
   url.searchParams.append('start', startIndex);
 
-  let result;
+  let result = {};
 
   try {
     const response = await fetch(url.href);
@@ -30,11 +30,11 @@ async function getImages(searchString, startIndex) {
       items,
       hasMore: ok && body.queries.nextPage !== undefined,
     };
-  } catch(e) {
+  } catch (e) {
     console.error(e)
     throw new Error('Error getting images');
   }
-  
+
   return result;
 }
 

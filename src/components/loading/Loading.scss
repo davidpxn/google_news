@@ -1,31 +1,6 @@
 @import "../../config.scss";
 
-
-.loading {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-
-
-  & > .loading__icon {
-    width: 8px;
-    height: 8px;
-    margin: 4px;
-    fill: $blue-dark;
-
-    animation: loading-animation 900ms linear;
-    animation-iteration-count: infinite;
-  }
-
-  & > .loading__icon:nth-child(2) {
-    animation-delay: 300ms;
-  }
-
-  & > .loading__icon:nth-child(3) {
-    animation-delay: 600ms;
-  }
-}
-
+$loading-animation-time: 900ms;
 
 @keyframes loading-animation {
   0% {
@@ -36,5 +11,30 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+
+  & > .loading__icon {
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    fill: $blue-dark;
+
+    animation: loading-animation $loading-animation-time linear;
+    animation-iteration-count: infinite;
+  }
+
+  & > .loading__icon:nth-child(2) {
+    animation-delay: $loading-animation-time/3;
+  }
+
+  & > .loading__icon:nth-child(3) {
+    animation-delay: $loading-animation-time/3 * 2;
   }
 }

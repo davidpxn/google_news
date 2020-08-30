@@ -1,26 +1,46 @@
 @import "../../config.scss";
 
+$animation-time: 400ms;
+
+@keyframes minimize-animation {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+@keyframes maximize-animation {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 
 .search {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  margin-bottom: 1rem;
 
-  width: 100%;
   position: sticky;
   top: 1rem;
+
+  width: 100%;
+  margin-bottom: 1rem;
   z-index: 1;
 
-
   & > .search__field {
-    animation: maximize-animation 300ms ease;
+    animation: maximize-animation $animation-time ease;
     animation-fill-mode: forwards;
   }
 
   &--minimized {
     & > .search__field {
-      animation: minimize-animation 300ms ease;
+      animation: minimize-animation $animation-time ease;
       animation-fill-mode: forwards;
     }
   }
@@ -74,24 +94,5 @@
     width: 20px;
     height: 20px;
     fill: $blue-medium;
-  }
-}
-
-
-@keyframes minimize-animation {
-  0% {
-    clip-path: inset(0 0 0 0);
-  }
-  100% {
-    clip-path: inset(0 0 0 100%);
-  }
-}
-
-@keyframes maximize-animation {
-  0% {
-    clip-path: inset(0 0 0 100%);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
   }
 }

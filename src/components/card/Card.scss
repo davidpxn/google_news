@@ -1,5 +1,8 @@
 @import "../../config.scss";
 
+$short-animation-time: 400ms;
+$long-animation-time: 800ms;
+
 
 .card {
   width: 100%;
@@ -57,11 +60,11 @@
       color: $white;
       width: 80%;
 
-      transition: bottom 400ms ease, opacity 400ms ease;
+      transition: bottom $short-animation-time ease, opacity $short-animation-time ease;
     } 
 
     &__img {
-      transition: filter 400ms ease, transform 800ms ease-out;
+      transition: filter $short-animation-time ease, transform $long-animation-time ease-out;
     }
 
     &__arrow {
@@ -75,7 +78,7 @@
       opacity: 0;
 
       transform: translateX(-2rem);
-      transition: opacity 400ms ease, transform 800ms ease-out;
+      transition: opacity $short-animation-time ease, transform $long-animation-time ease-out;
     }
 
     &:hover {

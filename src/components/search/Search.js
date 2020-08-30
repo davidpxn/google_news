@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 
 import { ReactComponent as IconSearch } from '../../resources/svg/search.svg';
-import { ReactComponent as IconClear } from '../../resources/svg/clear.svg'
+import { ReactComponent as IconClear } from '../../resources/svg/clear.svg';
 
 import './Search.scss';
 

@@ -27,8 +27,8 @@ function Card(props) {
           {deviceType === DeviceTypeEnum.DESKTOP && (
             <React.Fragment>
               {titleElement}
-              <IconArrow className="card__arrow"/>
-            </React.Fragment>  
+              <IconArrow className="card__arrow" />
+            </React.Fragment>
           )}
         </div>
         {deviceType !== DeviceTypeEnum.DESKTOP && titleElement}

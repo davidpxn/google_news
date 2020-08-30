@@ -6,8 +6,6 @@ import { getImages } from '../../api/api';
 import Search from '../../components/search/Search';
 import List from '../../containers/list/List';
 
-import './Home.scss';
-
 
 function Home() {
   const [searchValue, setSearchValue] = useState('');

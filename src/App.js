@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="app">
       <Helmet defaultTitle="Google Myndir" />
-      <Header/>
+      <Header />
       <Home />
     </div>
   );
