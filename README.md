@@ -26,7 +26,6 @@ Now you are all set to run the project:
 ```
 <br/>
 
-
-## Running instance
+## Live instance
 
 A running instance of the project is hosted on *Heroku* and can be found here: https://google-myndir.herokuapp.com/
