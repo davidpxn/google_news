@@ -10,16 +10,17 @@
   width: 100%;
   position: sticky;
   top: 1rem;
+  z-index: 1;
 
 
   & > .search__field {
-    animation: maximize-animation 300ms ease-out;
+    animation: maximize-animation 300ms ease;
     animation-fill-mode: forwards;
   }
 
   &--minimized {
     & > .search__field {
-      animation: minimize-animation 300ms ease-out;
+      animation: minimize-animation 300ms ease;
       animation-fill-mode: forwards;
     }
   }

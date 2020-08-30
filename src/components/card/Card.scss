@@ -4,11 +4,16 @@
 .card {
   width: 100%;
   padding: $gutter $gutter/2;
-  
 
   &__link {
     color: $black;
     text-decoration: none;
+  }
+
+  &__img-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
   }
   
   &__img {
@@ -17,20 +22,76 @@
   }
   
   &__title {
-    font-size: $size-xl;
+    font-size: $size-l;
     font-weight: 600;
   }
+}
 
 
-  @media (min-width: $point-phone-tablet) {
+@media (min-width: $point-phone-tablet) {
+  .card {
     width: 50%;
 
-    &__img {    
+    &__img-container {    
       height: 300px;
     }
-  }
 
-  @media (min-width: $point-tablet-desktop) {
-    width: 33.33333333%;
+    &__img {
+      height: 100%;
+    }
+  }
+}
+
+
+@media (min-width: $point-tablet-desktop) {
+  .card {
+    width: 33.33%;
+
+    &__title {
+      position: absolute;
+      bottom: -1rem;
+      left: 1rem;
+
+      opacity: 0;
+      color: $white;
+      width: 80%;
+
+      transition: bottom 400ms ease, opacity 400ms ease;
+    } 
+
+    &__img {
+      transition: filter 400ms ease, transform 800ms ease-out;
+    }
+
+    &__arrow {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+
+      width: 20px;
+      height: 20px;
+      fill: $white;
+      opacity: 0;
+
+      transform: translateX(-2rem);
+      transition: opacity 400ms ease, transform 800ms ease-out;
+    }
+
+    &:hover {
+      & .card__img {
+        filter: grayscale(100%) brightness(40%);
+        transform: scale(1.1);
+      }
+
+      & .card__title {
+        bottom: 1rem;
+        opacity: 1;
+      }
+
+      & .card__arrow {
+        opacity: 0.5;
+        transform: translateX(0);
+      }
+    }
   }
 }
