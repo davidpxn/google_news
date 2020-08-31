@@ -19,6 +19,7 @@ async function getImages(searchString, startIndex) {
         return {
           title: i.title,
           imgLink: i.link.startsWith('http') ? i.link : null,
+          websiteLink: i.displayLink.replace('www.', ''),
           contextLink: i.image.contextLink,
         };
       });

@@ -11,13 +11,19 @@ function Card(props) {
   const {
     title,
     imgLink,
+    websiteLink,
     contextLink,
   } = props;
 
   const { deviceType } = useContext(ViewportContext);
 
 
-  const titleElement = (<h2 className="card__title">{title}</h2>);
+  const titleElement = (
+    <React.Fragment>
+      <h3 className="card__website">{websiteLink}</h3>
+      <h2 className="card__title">{title}</h2>
+    </React.Fragment>
+  );
 
   return (
     <div className="card">
