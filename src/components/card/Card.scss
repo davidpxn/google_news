@@ -49,6 +49,10 @@ $long-animation-time: 800ms;
     &__img {
       height: 100%;
     }
+
+    &__title, &__website {
+      width: 80%;
+    } 
   }
 }
 
@@ -64,7 +68,6 @@ $long-animation-time: 800ms;
 
       opacity: 0;
       color: $white;
-      width: 80%;
 
       transition: bottom $short-animation-time ease, opacity $short-animation-time ease;
     } 
