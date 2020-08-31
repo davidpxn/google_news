@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 // Same breakpoints will be used in scss code.
 
 const ViewportBreakpoints = {
-  pointPhoneTablet: 800,
+  pointPhoneTablet: 700,
   pointTabletDesktop: 1100,
 };
 
